@@ -1,0 +1,10 @@
+:host {
+  width: 100%;
+}
+
+.truncated {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}

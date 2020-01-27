@@ -1,0 +1,12 @@
+<div [ngStyle]="params.colDef.cellStyle">
+  <div class="truncated">
+    <ng-container [ngSwitch]="params?.colDef?.useCustomTemplate?.name">
+      <span *ngSwitchCase="'date'">{{params.value | date}}</span>
+      <span *ngSwitchCase="'text'">{{params.value}}</span>
+      <a
+        [href]="params?.colDef?.useCustomTemplate?.baseUrl + params?.data?.id?.videoId"
+        *ngSwitchCase="'link'">{{params?.data?.snippet?.title}}</a>
+      <span *ngSwitchDefault>Error: Can't find the template!</span>
+    </ng-container>
+  </div>
+</div>

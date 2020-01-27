@@ -1,0 +1,3 @@
+<ng-container *ngIf="params && params.node">
+  <mat-checkbox [checked]="params.node.selected" (change)="onChange($event)"></mat-checkbox>
+</ng-container>

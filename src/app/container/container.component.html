@@ -1,0 +1,14 @@
+<ag-grid-angular
+  style="width: 100%; height: 100%"
+  class="ag-theme-balham"
+  [defaultColDef]="defaultColDef"
+  [rowData]="rowData | async"
+  [columnDefs]="columnDefs"
+  [suppressRowClickSelection]="true"
+  [rowSelection]="rowSelection"
+  [sideBar]="sideBar"
+  [modules]="modules"
+  [frameworkComponents]="frameworkComponents"
+  [getContextMenuItems]="getContextMenuItems"
+  (gridReady)="onGridReady($event)"
+></ag-grid-angular>
